@@ -1,0 +1,24 @@
+[package]
+name = "echo-reply"
+version = "0.1.0"
+edition = "2021"
+description = "macOS 微信回复助手体验版"
+
+[lib]
+name = "echo_reply"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "=2.7.4", features = [] }
+
+[dependencies]
+tauri = { version = "=2.12.5", features = ["tray-icon"] }
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-clipboard-manager = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "=0.37.0", features = ["bundled"] }
+uuid = { version = "1", features = ["v4"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["time", "sync", "macros"] }
+security-framework = "3.7"

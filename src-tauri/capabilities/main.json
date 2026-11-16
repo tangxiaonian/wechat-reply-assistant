@@ -1,0 +1,23 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main",
+  "description": "Only the local reply window may call these business commands.",
+  "windows": ["main"],
+  "permissions": [
+    "core:event:default",
+    "core:window:allow-start-dragging",
+    "allow-load-workspace",
+    "allow-profile-action",
+    "allow-get-provider",
+    "allow-save-provider",
+    "allow-remove-provider",
+    "allow-test-provider",
+    "allow-generate-reply",
+    "allow-cancel-reply",
+    "allow-copy-reply",
+    "allow-window-action",
+    "allow-tone-templates",
+    "allow-sync-settings",
+    "core:window:allow-is-visible"
+  ]
+}

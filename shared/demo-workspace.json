@@ -1,0 +1,353 @@
+{
+  "contacts": [
+    {
+      "id": "demo-friend",
+      "name": "林同学",
+      "initial": "林",
+      "relationship": "朋友",
+      "tint": "sage",
+      "description": "约好一起看展的朋友",
+      "messages": [
+        {
+          "id": "friend-1",
+          "direction": "other",
+          "text": "周六下午要不要一起去看展？",
+          "at": "14:20"
+        },
+        {
+          "id": "friend-2",
+          "direction": "self",
+          "text": "好呀，我下午有空。",
+          "at": "14:21"
+        },
+        {
+          "id": "friend-3",
+          "direction": "other",
+          "text": "那两点在地铁口见？",
+          "at": "14:22"
+        }
+      ]
+    },
+    {
+      "id": "demo-work",
+      "name": "陈同事",
+      "initial": "陈",
+      "relationship": "工作伙伴",
+      "tint": "blue",
+      "description": "正在一起推进项目的同事",
+      "messages": [
+        {
+          "id": "work-1",
+          "direction": "other",
+          "text": "明天要用的资料，今天能给我吗？",
+          "at": "10:08"
+        },
+        {
+          "id": "work-2",
+          "direction": "self",
+          "text": "我正在整理。",
+          "at": "10:12"
+        },
+        {
+          "id": "work-3",
+          "direction": "other",
+          "text": "那下班前能先发我一版吗？",
+          "at": "10:13"
+        }
+      ]
+    },
+    {
+      "id": "demo-customer",
+      "name": "周女士",
+      "initial": "周",
+      "relationship": "客户",
+      "tint": "sand",
+      "description": "正在了解方案的客户",
+      "messages": [
+        {
+          "id": "customer-1",
+          "direction": "other",
+          "text": "这个方案看起来不错，就是预算有点超。",
+          "at": "16:32"
+        },
+        {
+          "id": "customer-2",
+          "direction": "self",
+          "text": "理解，您最想保留的是哪部分功能？",
+          "at": "16:34"
+        },
+        {
+          "id": "customer-3",
+          "direction": "other",
+          "text": "核心功能要保留，其他的可以先简化吗？",
+          "at": "16:35"
+        }
+      ]
+    },
+    {
+      "id": "demo-group",
+      "kind": "group",
+      "name": "项目讨论小组",
+      "initial": "群",
+      "relationship": "群聊",
+      "tint": "blue",
+      "description": "多人讨论 · 选消息再回复",
+      "members": [
+        {
+          "id": "self",
+          "name": "我"
+        },
+        {
+          "id": "lin",
+          "name": "林敏"
+        },
+        {
+          "id": "chen",
+          "name": "陈昊"
+        }
+      ],
+      "messages": [
+        {
+          "id": "group-1",
+          "direction": "other",
+          "senderId": "lin",
+          "senderName": "林敏",
+          "text": "预算有点紧，核心功能能保留，其他先简化吗？",
+          "at": "14:20"
+        },
+        {
+          "id": "group-2",
+          "direction": "other",
+          "senderId": "chen",
+          "senderName": "陈昊",
+          "text": "排期也要看看，下周二能对齐范围吗？",
+          "at": "14:21"
+        },
+        {
+          "id": "group-3",
+          "direction": "self",
+          "senderId": "self",
+          "senderName": "我",
+          "text": "我先确认一下，稍后一起同步。",
+          "at": "14:22"
+        },
+        {
+          "id": "group-4",
+          "direction": "other",
+          "senderId": "lin",
+          "senderName": "林敏",
+          "replyToId": "group-1",
+          "text": "@我 对，主要想确认核心功能别砍掉。",
+          "at": "14:23"
+        },
+        {
+          "id": "group-5",
+          "direction": "other",
+          "senderId": "chen",
+          "senderName": "陈昊",
+          "replyToId": "group-2",
+          "text": "那周二先看一版范围清单，可以吗？",
+          "at": "14:24"
+        }
+      ]
+    }
+  ],
+  "profiles": {
+    "demo-friend": {
+      "items": [
+        {
+          "id": "friend-relation",
+          "category": "relationship",
+          "subjectKey": "relationship.address",
+          "subjectLabel": "关系与称呼",
+          "content": "朋友，平时直接叫名字就好。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        },
+        {
+          "id": "friend-style",
+          "category": "communication",
+          "subjectKey": "communication.emoji",
+          "subjectLabel": "表达习惯",
+          "content": "喜欢简短轻松的回复，可以偶尔用表情。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        },
+        {
+          "id": "friend-preference",
+          "category": "preference",
+          "subjectKey": "preference.planning",
+          "subjectLabel": "提前约定",
+          "content": "周末的安排，希望提前约好。",
+          "sourceKind": "chat_fact",
+          "locked": false,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": [
+            {
+              "messageId": "friend-old-1",
+              "quote": "周末出去提前跟我说，我好安排时间。",
+              "at": "此前的示例聊天"
+            }
+          ]
+        },
+        {
+          "id": "friend-boundary",
+          "category": "boundary",
+          "subjectKey": "boundary.followup",
+          "subjectLabel": "回复节奏",
+          "content": "没及时回复时，不用连续追问。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        }
+      ],
+      "proposals": [
+        {
+          "id": "friend-conflict",
+          "kind": "conflict",
+          "category": "communication",
+          "subjectKey": "communication.emoji",
+          "subjectLabel": "表情使用",
+          "content": "近期回复少用表情，直接说事情。",
+          "targetItemId": "friend-style",
+          "evidence": [
+            {
+              "messageId": "friend-old-2",
+              "quote": "最近直接说就好，先别加表情啦。",
+              "at": "新的示例消息"
+            }
+          ]
+        },
+        {
+          "id": "friend-observation",
+          "kind": "observation",
+          "category": "communication",
+          "subjectKey": "communication.specific_plans",
+          "subjectLabel": "约见方式",
+          "content": "约见面时，会主动给出具体时间和地点。",
+          "targetItemId": null,
+          "evidence": [
+            {
+              "messageId": "friend-3",
+              "quote": "那两点在地铁口见？",
+              "at": "示例聊天 · 14:22"
+            }
+          ]
+        }
+      ],
+      "events": [],
+      "exclusions": []
+    },
+    "demo-work": {
+      "items": [
+        {
+          "id": "work-relation",
+          "category": "relationship",
+          "subjectKey": "relationship.address",
+          "subjectLabel": "关系与称呼",
+          "content": "协作同事，日常直接称呼名字。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        },
+        {
+          "id": "work-style",
+          "category": "communication",
+          "subjectKey": "communication.conclusion_first",
+          "subjectLabel": "沟通习惯",
+          "content": "先给结论，再说明时间和下一步。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        },
+        {
+          "id": "work-boundary",
+          "category": "boundary",
+          "subjectKey": "boundary.commitment",
+          "subjectLabel": "时间承诺",
+          "content": "未经确认的交付时间，不要直接承诺。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        }
+      ],
+      "proposals": [],
+      "events": [],
+      "exclusions": []
+    },
+    "demo-customer": {
+      "items": [
+        {
+          "id": "customer-relation",
+          "category": "relationship",
+          "subjectKey": "relationship.address",
+          "subjectLabel": "关系与称呼",
+          "content": "意向客户，称呼周女士，沟通专业但不过分客套。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        },
+        {
+          "id": "customer-preference",
+          "category": "preference",
+          "subjectKey": "preference.budget",
+          "subjectLabel": "关注重点",
+          "content": "当前希望控制预算，优先保留核心功能。",
+          "sourceKind": "chat_fact",
+          "locked": false,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": [
+            {
+              "messageId": "customer-3",
+              "quote": "核心功能要保留，其他的可以先简化吗？",
+              "at": "示例聊天 · 16:35"
+            }
+          ]
+        },
+        {
+          "id": "customer-boundary",
+          "category": "boundary",
+          "subjectKey": "boundary.pricing",
+          "subjectLabel": "报价边界",
+          "content": "没有确认过的价格、折扣和交付日期，不要代我承诺。",
+          "sourceKind": "manual",
+          "locked": true,
+          "scope": "long_term",
+          "expiresAtMs": null,
+          "revision": 1,
+          "evidence": []
+        }
+      ],
+      "proposals": [],
+      "events": [],
+      "exclusions": []
+    }
+  }
+}

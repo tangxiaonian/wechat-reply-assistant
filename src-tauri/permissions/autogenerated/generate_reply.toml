@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-generate-reply"
+description = "Enables the generate_reply command without any pre-configured scope."
+commands.allow = ["generate_reply"]
+
+[[permission]]
+identifier = "deny-generate-reply"
+description = "Denies the generate_reply command without any pre-configured scope."
+commands.deny = ["generate_reply"]

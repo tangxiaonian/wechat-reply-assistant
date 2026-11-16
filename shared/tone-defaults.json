@@ -1,0 +1,30 @@
+[
+  {
+    "id": "builtin-natural",
+    "name": "随口聊聊",
+    "instruction": "像熟人聊天，简短、口语化，别像写邮件，不要堆客套话。",
+    "enabled": true,
+    "baseTone": "自然"
+  },
+  {
+    "id": "builtin-warm",
+    "name": "温柔一点",
+    "instruction": "温柔自然，有关心但不腻，不说过度亲密或夸张的话。",
+    "enabled": true,
+    "baseTone": "温柔"
+  },
+  {
+    "id": "builtin-fun",
+    "name": "有点嘴贫",
+    "instruction": "轻松一点，带一点机灵和善意吐槽，像朋友接话，不冒犯别人，不硬凹梗。",
+    "enabled": true,
+    "baseTone": "俏皮"
+  },
+  {
+    "id": "builtin-formal",
+    "name": "专业简短",
+    "instruction": "直说重点，清楚有分寸，少官话，不做未经确认的承诺。",
+    "enabled": true,
+    "baseTone": "正式"
+  }
+]
